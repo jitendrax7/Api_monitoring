@@ -1,0 +1,91 @@
+# ----------------------------
+# OS Generated Files
+# ----------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ----------------------------
+# Logs
+# ----------------------------
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ----------------------------
+# Environment Variables
+# ----------------------------
+.env
+.env.*
+!.env.example
+
+# ----------------------------
+# Dependency Directories
+# ----------------------------
+node_modules/
+vendor/
+venv/
+.venv/
+__pycache__/
+
+# ----------------------------
+# Build / Output Directories
+# ----------------------------
+dist/
+build/
+out/
+coverage/
+*.tsbuildinfo
+
+# ----------------------------
+# Python
+# ----------------------------
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# ----------------------------
+# Node.js
+# ----------------------------
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ----------------------------
+# IDE / Editor
+# ----------------------------
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ----------------------------
+# Temporary Files
+# ----------------------------
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# ----------------------------
+# Docker
+# ----------------------------
+.dockerignore
+
+# ----------------------------
+# Misc
+# ----------------------------
+*.seed
+*.pid
+*.pid.lock
