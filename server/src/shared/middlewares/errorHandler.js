@@ -31,7 +31,7 @@ const errorHandler = (err, req, res, next) => {
         message = "Token Expired";
     };
 
-    req.status(statusCode).json(ResponseFormatter.error(message, statusCode, errors));
+    res.status(statusCode).json(ResponseFormatter.error(message, statusCode, errors));
 }
 
 

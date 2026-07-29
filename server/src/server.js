@@ -166,8 +166,8 @@ async function startServer() {
             }, 10000);
         }
 
-        process.on('SIGTERM', gracefulShutdown("SIGTERM"));
-        process.on('SIGINT', gracefulShutdown("SIGINT"));
+        process.on('SIGTERM', ()=> gracefulShutdown("SIGTERM"));
+        process.on('SIGINT', ()=> gracefulShutdown("SIGINT"));
 
         // handle uncought expections
         process.on('uncaughtException', (error) => {
