@@ -34,7 +34,7 @@ class ResponseFormatter {
             message,
             statusCode,
             errors,
-            timestamp:Date.now().toISOString()
+            timestamp: new Date().toISOString()
         }
     }
 }

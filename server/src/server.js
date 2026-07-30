@@ -5,7 +5,7 @@ import config from "./shared/config/index.js";
 import logger from "./shared/config/logger.js";
 import mongodb from "./shared/config/mongodb.js";
 import postgres from "./shared/config/postgres.js";
-// import rabbitmq from "./shared/config/.js";
+import rabbitmq from "./shared/config/rabbitmq.js";
 import errorHandler from "./shared/middlewares/errorHandler.js";
 import ResponceFormatter from './shared/utils/responceFormatter.js'
 import cookieParser from "cookie-parser";
@@ -110,14 +110,20 @@ async function initializeConnection(){
     try {
         logger.info('Initializing database connections...');
 
+        console.log('Initializing database connections...');   // remove this line in production
+
         // Connect to MongoDB
         await mongodb.connect();
 
+        console.log('MongoDB connection established successfully.');   // remove this line in production
+
         // Connect to PostgreSQL
         await postgres.testConnection();
-
+        
+        console.log('PostgreSQL connection established successfully.');   // remove this line in production
         // Connect to RabbitMQ
-        // await rabbitmq.connect();
+        await rabbitmq.connect();
+        console.log('RabbitMQ connection established successfully.');   // remove this line in production
 
         logger.info('All connections established successfully.');
     } catch (error) {
@@ -136,6 +142,7 @@ async function startServer() {
             logger.info(`Server is running on port ${config.port}`);
             logger.info(`Environment: ${config.node_env}`);
             logger.info(`API available at: http://localhost:${config.port}`);
+            console.log(`Server is running on port ${config.port}`);  // remove this line in production
         });
 
         // Handle graceful shutdown
